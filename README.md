@@ -20,7 +20,7 @@ To build this server from source, perform the following steps:
 postgres should have a database created for use with catalog service
 
 ### How to perform the build
-git clone https://github.com/alkuma/catalog-server.git
+git clone https://github.com/alkuma/pricing-server.git
 gradle clean build #this will also run the unit tests.
 The war is generated in build/libs folder and is called
 pricing-server-1.0.0.war
