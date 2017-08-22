@@ -1,6 +1,9 @@
+*.iml
 .gradle
 .idea
 .swagger-codegen
 .swagger-codegen-ignore
+bin
 build
+out
 pom.xml

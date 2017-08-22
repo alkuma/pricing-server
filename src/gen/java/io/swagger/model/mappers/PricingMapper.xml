@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace='io.swagger.model.mappers.PricingMapper'>
+
+    <insert id='createDatastoreObjectsIfAbsent'>
+        CREATE TABLE IF NOT EXISTS pricing
+        (
+            id INTEGER PRIMARY KEY,
+            price DECIMAL(9,3),
+            ccy VARCHAR(3)
+        );
+
+    </insert>
+
+    <select id='getPriceById' parameterType='Long' resultType='io.swagger.model.Pricing'>
+        SELECT id AS id,
+        price AS price,
+        ccy AS ccy
+        FROM pricing
+        WHERE id = #{Long}
+    </select>
+
+</mapper>
